@@ -1,33 +1,14 @@
 function mouseDown() {
-    for (let i = 0; i < 5; i++) {
-        if (event.target === Aplayer[i]) {
-            click = true;
-            originX = event.clientX;
-            originY = event.clientY;
-            originLeft = Aplayer[i].offsetLeft;
-            originTop = Aplayer[i].offsetTop;
-            break;
-        }
-        else if (event.target === Bplayer[i]) {
-            click = true;
-            originX = event.clientX;
-            originY = event.clientY;
-            originLeft = Bplayer[i].offsetLeft;
-            originTop = Bplayer[i].offsetTop;
-            break;
-        }
-    }
-    if(event.target === ball){
-        click = true;
-        originX = event.clientX;
-        originY = event.clientY;
-        originLeft = ball.offsetLeft;
-        originTop = ball.offsetTop;
-            
-    }
+    click = true;
+    originX = event.clientX;
+    originY = event.clientY;
+    originLeft = event.target.offsetLeft;
+    originTop = event.target.offsetTop;
+    event.target.style.zIndex='1000';
 }
 function mouseUp() {
     click = false;
+    event.target.style.zIndex='0';
 }
 function mouseMove() {
     if (click) {
