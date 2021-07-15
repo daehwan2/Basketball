@@ -11,61 +11,21 @@
 <body>
     <div class="container">
         <div class="court">
-            <img class="ball" src="image/ball.png" alt="ball">
-            <div class="Aplayer player">1</div>
-            <div class="Aplayer player">2</div>
-            <div class="Aplayer player">3</div>
-            <div class="Aplayer player">4</div>
-            <div class="Aplayer player">5</div>
-            <div class="Bplayer player">1</div>
-            <div class="Bplayer player">2</div>
-            <div class="Bplayer player">3</div>
-            <div class="Bplayer player">4</div>
-            <div class="Bplayer player">5</div>
+            <img class="ball" src="image/ball.png" alt="ball" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+            <div class="Aplayer player Aplayer1" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">1</div>
+            <div class="Aplayer player Aplayer2" oncontextmenu="return false" ondragstart="return false" onselectstart="return false" >2</div>
+            <div class="Aplayer player Aplayer3" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">3</div>
+            <div class="Aplayer player Aplayer4" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">4</div>
+            <div class="Aplayer player Aplayer5" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">5</div>
+            <div class="Bplayer player Bplayer1" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">1</div>
+            <div class="Bplayer player Bplayer2" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">2</div>
+            <div class="Bplayer player Bplayer3" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">3</div>
+            <div class="Bplayer player Bplayer4" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">4</div>
+            <div class="Bplayer player Bplayer5" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">5</div>
         </div>
     </div>
 
-    <script>
-        
-        function mouseDown(){
-            click=true;
-            originX = event.clientX;
-            originY = event.clientY;                
-            originLeft = ball.offsetLeft;
-            originTop = ball.offsetTop;
-        }
-        function mouseUp(){
-            click=false;
-        }
-        function mouseMove(){
-            if(click){
-                const diffX = event.clientX - originX;
-                const diffY = event.clientY - originY;
-                const endOfXPoint = courtWidth-ballWidth;
-                const endOfYPoint = courtHeight-ballHeight;
-                ball.style.left =`${Math.min(Math.max(0,originLeft+diffX),endOfXPoint)}px`;
-                ball.style.top = `${Math.min(Math.max(0,originTop+diffY),endOfYPoint)}px`;
-                
-                console.log("이동");
-            }
-        }
-        const court = document.querySelector('.court');
-        const ball = document.querySelector('.ball');
-
-        const {width:courtWidth, height:courtHeight} = court.getBoundingClientRect();
-        const {width:ballWidth, height:ballHeight} = ball.getBoundingClientRect();
-        let click=false;
-        let originX;
-        let originY;
-        let originLeft;
-        let originTop;
-
-        // const Aplayer = document.querySelectorAll('.Aplayer');
-        // const Bplayer = document.querySelectorAll('.Bpayler');
-        ball.addEventListener('mousedown',mouseDown);
-        ball.addEventListener('mouseup',mouseUp);
-        court.addEventListener('mousemove',mouseMove);
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>

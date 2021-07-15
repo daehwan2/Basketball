@@ -27,7 +27,39 @@ body{
     height: 4vh;
     text-align: center;
     border-radius: 50%;
-    border:1px solid black
+    border:1px solid black;
+    position: absolute;
+    cursor: pointer;
+}
+.Aplayer1{
+    top: 6vh;
+}
+.Aplayer2{
+    top: 12vh;
+}
+.Aplayer3{
+    top: 18vh;
+}
+.Aplayer4{
+    top: 24vh;
+}
+.Aplayer5{
+    top: 30vh;
+}
+.Bplayer1{
+    top: 36vh;
+}
+.Bplayer2{
+    top: 42vh;
+}
+.Bplayer3{
+    top: 48vh;
+}
+.Bplayer4{
+    top: 54vh;
+}
+.Bplayer5{
+    top: 60vh;
 }
 .Aplayer{
     background-color: royalblue;
